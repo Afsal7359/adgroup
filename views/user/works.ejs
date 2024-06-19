@@ -1,0 +1,40 @@
+
+<%if (work) { %>
+  <!--=== Blogs Start ======-->
+  <section class="pt-100 pb-100">
+    <div class="container">
+      <div class="row">
+        <% for (let i = 0; i < work.length; i++) { %>
+          <% let item = work[i]; %>
+        <div class="col-md-4" >
+          <div class="post">
+            <div class="post-img"> <img class="img-responsive" src="<%=item.image%>" alt="" style="border: 1px solid #9f082c;"/> </div>
+            <div class="post-info" style="background-color: #fff;">
+              <h3><a href="/workdetail" style="color: #000;"><%item.heading%> </a></h3>
+              <p style="color: #000;"><%=item.description.substring(0, 35) %>...</p>
+              <a class="readmore dark-color" style="background-color: #000; padding:0.4em;border-radius: 5px;" href="/<%= item._id %>"><span style="color: #fff;"> Read More</span></a> </div>
+          </div>
+        </div>
+        <%}%>
+   </div>
+    </div>
+  </section>
+  <%}%>
+  <!--=== Blogs End ======-->
+
+  <%if (clients) { %>
+    <!--=== Clients Start ======-->
+    <section class="pt-50 pb-50 white-bg">
+      <div class="container">
+        <div class="row">
+          <div id="client-slider" class="owl-carousel">
+            <% for (let i = 0; i < clients.length; i++) { %>
+              <% let item = clients[i]; %>
+            <div class="client-logo"> <img class="img-responsive" src="<%=item.image%>" alt="01"/> </div>
+           <%}%>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=== Clients End ======-->
+    <%}%>

@@ -1,0 +1,166 @@
+
+  <!--=== Who We Are Start ===-->
+  <section class="first-ico-box">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 section-heading">
+          <h2 class="text-uppercase">Our Services</h2>
+          <h4 class="text-uppercase source-font">- The world at your fingertips -</h4>
+          <div class="mt-30">
+            <p>We are a fully in-house digital agency focusing on branding, marketing, web design and development with clients ranging from start-ups, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius quam ut magna ultricies pellentesque. </p>
+          </div>
+        </div>
+      </div>
+      <%if (service) { %>
+      <div class="row mt-30">
+        <% for (let i = 0; i < service.length; i++) { %>
+          <% let item = service[i]; %>
+        <div class="col-md-4 feature-box text-left mb-50 col-sm-6 wow fadeTop" data-wow-delay="0.1s">
+          <div class="pull-left">
+            <img src="<%=item.image%>" alt="">
+          </div>
+          <div class="pull-right">
+            <h5 class="mt-0 upper-case"><%=item.heading%></h5>
+            <p><%=item.description.substring(0, 125)%>...</p>
+          </div>
+        </div>
+       <%}%>
+      </div>
+      <%}%>
+    </div>
+  </section>
+  <!--=== Who We Are End ===-->
+
+
+
+
+  <!--=== Testimonails Start ===-->
+  <section class="testimonial-style-02">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 section-heading">
+          <h2 class="wow fadeTop josefin-font text-uppercase" data-wow-delay="0.1s">Our <span class="font-100">Testimonials</span></h2>
+          <h4 class="text-uppercase source-font wow fadeTop" data-wow-delay="0.2s">- Happy Client Reviews -</h4>
+        </div>
+      </div>
+      <div class="row">
+
+          <div class="slick testimonial-carousel testimonial-style-01">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <!--=== Slide ===-->
+              <div class="testimonial-item">
+                <div class="testimonial-content">
+                  <div class="content-wrap">
+                    <div class="info">
+                      <div class="image">
+                        <img class="img-responsive img-circle" src="assets/images/new/profile.png" alt="avatar-1"/>
+                      </div>
+                      <div class="cite">
+                        <h6 class="name">Athul Raj </h6>
+                        <!-- <span class="position">Creative Designer</span> -->
+                      </div>
+                    </div>
+                    <div class="content">
+                      <div class="text">
+                        <i class="icofont icofont-quote-left font-20px default-color mt-20 mr-10"></i><span>Great work I got a lot more than what I ordered, they are very legítimas and catchy. I went for one of them for my brand but is always better to have more options.</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <!--=== Slide ===-->
+              <div class="testimonial-item">
+                <div class="testimonial-content">
+                  <div class="content-wrap">
+                    <div class="info">
+                      <div class="image">
+                        <img class="img-responsive img-circle" src="assets/images/new/profile.png" alt="avatar-2"/>
+                      </div>
+                      <div class="cite">
+                        <h6 class="name">Rahul K S</h6>
+                        <!-- <span class="position">Business Developer</span> -->
+                      </div>
+                    </div>
+                    <div class="content">
+                      <div class="text">
+                        <i class="icofont icofont-quote-left font-20px default-color mt-20 mr-10"></i><span>I’m very happy with the results! They went above and beyond for me and that is always appreciated! I would highly recommend Ad Group to anybody!</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <!--=== Slide ===-->
+              <div class="testimonial-item">
+                <div class="testimonial-content">
+                  <div class="content-wrap">
+                    <div class="info">
+                      <div class="image">
+                        <img class="img-responsive img-circle" src="assets/images/new/profile.png" alt="avatar-3"/>
+                      </div>
+                      <div class="cite">
+                        <h6 class="name">Rajeev S Kumar</h6>
+                        <!-- <span class="position">Application Developer</span> -->
+                      </div>
+                    </div>
+                    <div class="content">
+                      <div class="text">
+                        <i class="icofont icofont-quote-left font-20px default-color mt-20 mr-10"></i><span>I’m very happy with the results! They went above and beyond for me and that is always appreciated! I would highly recommend SH to anybody!</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <!--=== Slide ===-->
+              <div class="testimonial-item">
+                <div class="testimonial-content">
+                  <div class="content-wrap">
+                    <div class="info">
+                      <div class="image">
+                        <img class="img-responsive img-circle" src="assets/images/new/profile.png" alt="avatar-3"/>
+                      </div>
+                      <div class="cite">
+                        <h6 class="name">Abdul Rahman C S</h6>
+                        <!-- <span class="position">Full Stack Developer</span> -->
+                      </div>
+                    </div>
+                    <div class="content">
+                      <div class="text">
+                        <i class="icofont icofont-quote-left font-20px default-color mt-20 mr-10"></i><span>Very much satisfied with the service. Delivered on time and responded to request for modifications within few hours. I recommend Sloganshub for anyone looking for smart business.</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+      </div>
+    </div>
+  </section>
+  <!--=== Testimonails End ===-->
+
+  <%if (clients) { %>
+    <!--=== Clients Start ======-->
+    <section class="pt-50 pb-50 white-bg">
+      <div class="container">
+        <div class="row">
+          <div id="client-slider" class="owl-carousel">
+            <% for (let i = 0; i < clients.length; i++) { %>
+              <% let item = clients[i]; %>
+            <div class="client-logo"> <img class="img-responsive" src="<%=item.image%>" alt="01"/> </div>
+           <%}%>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=== Clients End ======-->
+    <%}%>

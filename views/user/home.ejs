@@ -1,0 +1,353 @@
+
+  <!--=== Flex Slider Start ======-->
+  <section class="pt-0 pb-0">
+    <div class="slider-bg flexslider">
+      <ul class="slides">
+        <!--=== SLIDE 1 ===-->
+        <%if (banner) { %>
+          <% for (let i = 0; i < banner.length; i++) { %>
+            <% let item = banner[i]; %>
+        <li>
+          <div class="slide-img" style="background:url(<%=item.image%>) center center / cover scroll no-repeat;" data-stellar-background-ratio="0.2"></div>
+          <div class="hero-text-wrap">
+            <div class="hero-text white-color">
+              <div class="container text-left">
+                <h2 class="cardo-font"><%= item.heading %></h2>
+                <h2 class="cardo-font"><%= item.subheading %></h2>
+                <p class="text-left mt-30"><a class="btn btn-dark btn-circle btn-animate"><span>Start Your Business <i class="icofont icofont-arrow-right"></i></span></a> </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <% } %>
+      <%}else{%>
+        <!-- <li>
+          <div class="slide-img" style="background:url(assets/images/new/dashboard.png) center center / cover scroll no-repeat;" data-stellar-background-ratio="0.2"></div>
+          <div class="hero-text-wrap">
+            <div class="hero-text white-color">
+              <div class="container text-left">
+                <h2 class="cardo-font">We Design & Build</h2>
+                <h2 class="cardo-font">Digital Themes</h2>
+                <p class="text-left mt-30"><a class="btn btn-dark btn-circle btn-animate"><span>Start a Project <i class="icofont icofont-arrow-right"></i></span></a> </p>
+              </div>
+            </div>
+          </div>
+        </li> -->
+        <%}%>
+      </ul>
+    </div>
+  </section>
+  <!--=== Flex Slider End ======-->
+
+
+    <section class="first-ico-box">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 section-heading">
+            <h2 class="wow fadeTop text-uppercase" data-wow-delay="0.1s">Services <span class="font-100">We Offer</span></h2>
+            <h4 class="text-uppercase source-font wow fadeTop" data-wow-delay="0.2s">Services Provide</h4>
+          </div>
+        </div>
+        <div class="row mt-50 service-style-one">
+          <%if (service) { %>
+              <% for (let i = 0; i < service.length; i++) { %>
+                <% let item = service[i]; %>
+          <div class="col-md-4 text-center wow fadeTop" data-wow-delay="0.1s"> 
+            <div class="feature-box">
+              <img src="<%=item.image%>" alt="" style="height: 100%; width: 100%;">
+              <!-- <i class="icofont icofont-rocket-alt-1 font-50px gradient-color"></i> -->
+              <h3><%=item.heading%></h3>
+              <p><%= item.description.substring(0, 35) %>...</p>
+              <a class="btn btn-danger" href="/service/<%=item._id%>">view more ...</a>
+            </div>
+          </div>
+          <%}%>
+          <%}%>
+       
+     
+         
+        </div>
+      </div>
+    </section>
+    <!--=== Who We Are End ======-->
+
+
+
+    <!--=== About Us Start ======-->
+    <section class="white-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="section-heading text-left">
+              <h2 class="wow fadeTop text-uppercase" data-wow-delay="0.1s">About <span class="font-100">Us</span></h2>
+              <h4 class="text-uppercase source-font wow fadeTop" data-wow-delay="0.2s">Innovate . Design . Define</h4>
+            </div>
+            <!-- <div class="info-counter wow fadeTop" data-wow-delay="0.3s">
+              <div class="circle-progress-wrap">
+                <div class="pie-progress pie-title-center" data-percent="100"> 
+                  <span class="pie-value"></span> 
+                </div>
+              </div>
+              <p>We develop products and services for ecommerce, insurance and a handful of other key industries.</p>
+            </div> -->
+            <div class="info-desc wow fadeTop" data-wow-delay="0.4s">
+              <p style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Welcome to our company! With over 13 years of expe-
+                rience in the dynamic world of advertising media, we
+                are your trusted partner for crafting impactful cam-
+                paigns. Our team of seasoned professionals excels in
+                understanding your brand's essence and delivering in-
+                novative solutions to elevate your market presence.
+                From traditional advertising channels to cutting-edge
+                digital platforms, we create bespoke strategies tailored
+                to your specific goals. Whether it's increasing brand
+                awareness, driving conversions, or engaging your
+                target audience, we have the expertise and passion to
+                make it happen. Join us on this journey, and together,
+                let's propel your business to new heights of success.</p>
+            </div>
+  
+  
+            <div class="row">
+              <div class="col-md-12">
+                <a href="#" class="btn btn-color btn-circle wow fadeTop" data-wow-delay="0.3s">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="about-img">
+              <img class="img-responsive" src="assets/images/new/about2.png" alt="" style="border: 3px solid #fff;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=== About Us End ======-->
+
+
+  <!--=== Portfolio Start ======-->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="section-heading text-left">
+                <h2 class="wow fadeTop josefin-font text-uppercase" data-wow-delay="0.1s">Featured <span class="font-100">Works</span></h2>
+              </div>
+            </div>
+            <!-- <div class="col-md-4">
+              <div class="scoda-swiper pagination-style-01">
+                <div class="swiper-pagination"></div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%if (work) { %>
+    <section class="pt-100 pb-100">
+      <div class="container">
+    <div class="row">
+      <% for (let i = 0; i < work.length; i++) { %>
+        <% let item = work[i]; %>
+      <div class="col-md-4" >
+        <div class="post">
+          <div class="post-img"> <img class="img-responsive" src="<%=item.image%>" alt="" style="border: 1px solid #9f082c;"/> </div>
+          <div class="post-info" style="background-color: #fff;">
+            <h3><a href="/<%= item._id %>" style="color: #000;"><%=item.heading%></a></h3>
+            <p style="color: #000;"><%=item.description.substring(0, 35) %>...</p>
+            <a class="readmore dark-color" style="background-color: #000; padding:0.4em;border-radius: 5px;" href="/<%= item._id %>"><span style="color: #fff;"> Read More</span></a> </div>
+        </div>
+      </div>
+   <%}%>
+      </div>
+  </div>
+  </section>
+  </section>
+  <%}%>
+  <!--=== Portfolio End ======-->
+
+  <!--=== Counter Start ======-->
+  <section class="white-bg pt-80 pb-80">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 counter text-center col-sm-6 wow fadeTop" data-wow-delay="0.1s">
+          <h2 class="count font-700 gradient-color josefin-font">14</h2>
+          <h3 class="dark-color josefin-font">Years Experience</h3>
+        </div>
+        <div class="col-md-4 counter text-center col-sm-6 wow fadeTop" data-wow-delay="0.2s">
+          <h2 class="count font-700 gradient-color josefin-font">220</h2>
+          <h3 class="dark-color josefin-font">Happy Clients</h3>
+        </div>
+        <div class="col-md-4 counter text-center col-sm-6 wow fadeTop" data-wow-delay="0.3s">
+          <h2 class="count font-700 gradient-color josefin-font">108</h2>
+          <h3 class="dark-color josefin-font">Completed Works</h3>
+        </div>
+       
+      </div>
+    </div>
+  </section>
+  <!--=== Counter End ======-->
+
+  <!--=== Call to Action Start ======-->
+  <section class="pt-50 pb-50 dark-bg cta-block">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="cta-heading-left">
+            <p class="subtitle mt-20">Let's Talk</p>
+            <h3>Start a Project</h3>
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-6">
+          <div class="cta-heading-right">
+            <p class="mt-30 pull-right"><a href="/contact" class="btn btn-circle btn-outline">Contact Us</a></p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="cta-heading-right">
+            <p class="mt-20 content-text">We do not tell you our story. We write it together. Partnering with us means a seat at<br> the table where you will be heard.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--=== Call to Action Start ======-->
+
+
+
+  <!--=== Testimonails Start ===-->
+  <section class="testimonial-style-02">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 section-heading">
+          <h2 class="wow fadeTop josefin-font text-uppercase" data-wow-delay="0.1s">Our <span class="font-100">Testimonials</span></h2>
+          <h4 class="text-uppercase source-font wow fadeTop" data-wow-delay="0.2s">- Happy Client Reviews -</h4>
+        </div>
+      </div>
+      <div class="row">
+
+          <div class="slick testimonial-carousel testimonial-style-01">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <!--=== Slide ===-->
+              <div class="testimonial-item">
+                <div class="testimonial-content">
+                  <div class="content-wrap">
+                    <div class="info">
+                      <div class="image">
+                        <img class="img-responsive img-circle" src="assets/images/new/profile.png" alt="avatar-1"/>
+                      </div>
+                      <div class="cite">
+                        <h6 class="name">Athul Raj </h6>
+                        <!-- <span class="position">Creative Designer</span> -->
+                      </div>
+                    </div>
+                    <div class="content">
+                      <div class="text">
+                        <i class="icofont icofont-quote-left font-20px default-color mt-20 mr-10"></i><span>Great work I got a lot more than what I ordered, they are very legítimas and catchy. I went for one of them for my brand but is always better to have more options.</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <!--=== Slide ===-->
+              <div class="testimonial-item">
+                <div class="testimonial-content">
+                  <div class="content-wrap">
+                    <div class="info">
+                      <div class="image">
+                        <img class="img-responsive img-circle" src="assets/images/new/profile.png" alt="avatar-2"/>
+                      </div>
+                      <div class="cite">
+                        <h6 class="name">Rahul K S</h6>
+                        <!-- <span class="position">Business Developer</span> -->
+                      </div>
+                    </div>
+                    <div class="content">
+                      <div class="text">
+                        <i class="icofont icofont-quote-left font-20px default-color mt-20 mr-10"></i><span>I’m very happy with the results! They went above and beyond for me and that is always appreciated! I would highly recommend Ad Group to anybody!</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <!--=== Slide ===-->
+              <div class="testimonial-item">
+                <div class="testimonial-content">
+                  <div class="content-wrap">
+                    <div class="info">
+                      <div class="image">
+                        <img class="img-responsive img-circle" src="assets/images/new/profile.png" alt="avatar-3"/>
+                      </div>
+                      <div class="cite">
+                        <h6 class="name">Rajeev S Kumar</h6>
+                        <!-- <span class="position">Application Developer</span> -->
+                      </div>
+                    </div>
+                    <div class="content">
+                      <div class="text">
+                        <i class="icofont icofont-quote-left font-20px default-color mt-20 mr-10"></i><span>I’m very happy with the results! They went above and beyond for me and that is always appreciated! I would highly recommend SH to anybody!</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <!--=== Slide ===-->
+              <div class="testimonial-item">
+                <div class="testimonial-content">
+                  <div class="content-wrap">
+                    <div class="info">
+                      <div class="image">
+                        <img class="img-responsive img-circle" src="assets/images/new/profile.png" alt="avatar-3"/>
+                      </div>
+                      <div class="cite">
+                        <h6 class="name">Abdul Rahman C S</h6>
+                        <!-- <span class="position">Full Stack Developer</span> -->
+                      </div>
+                    </div>
+                    <div class="content">
+                      <div class="text">
+                        <i class="icofont icofont-quote-left font-20px default-color mt-20 mr-10"></i><span>Very much satisfied with the service. Delivered on time and responded to request for modifications within few hours. I recommend Sloganshub for anyone looking for smart business.</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+      </div>
+    </div>
+  </section>
+  <!--=== Testimonails End ===-->
+
+  <%if (clients) { %>
+    <!--=== Clients Start ======-->
+    <section class="pt-50 pb-50 white-bg">
+      <div class="container">
+        <div class="row">
+          <div id="client-slider" class="owl-carousel">
+            <% for (let i = 0; i < clients.length; i++) { %>
+              <% let item = clients[i]; %>
+            <div class="client-logo"> <img class="img-responsive" src="<%=item.image%>" alt="01"/> </div>
+           <%}%>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--=== Clients End ======-->
+    <%}%>

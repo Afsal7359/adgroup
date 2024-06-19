@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="  X-UA-Compatible" content="IE=edge">
+<title>AD  Group</title>
+<link rel="shortcut icon" href="assets/images/new/logo.png">
+<link rel="stylesheet" href="assets/css/master.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+
+<!-- Revolution Style Sheets -->
+<link rel="stylesheet" type="text/css" href="revolution/css/settings.css">
+<link rel="stylesheet" type="text/css" href="revolution/css/layers.css">
+<link rel="stylesheet" type="text/css" href="revolution/css/navigation.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.4/swiper-bundle.min.css">
+
+
+</head>
+<body>
+<!--=== Loader Start ======-->
+<div id="loader-overlay">
+  <div class="loader-wrapper">
+    <!-- <div class="scoda-pulse"></div> -->
+	 <img src="assets/images/new/logo.png" style="height: 65px;" alt="">
+  </div>
+</div>
+
+
+<div class="wrapper">
+  <%- include('partials/userheader') %>    
+  <%- body %>
+  <%- include('partials/userfooter') %>   
+
+    <!--=== GO TO TOP  ===-->
+    <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
+    <!--=== GO TO TOP End ===-->
+</div>
+
+<!--=== Loader End ======-->
+<!--=== Javascript Plugins ======-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11.1.4/swiper-bundle.min.js"></script>
+
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/validator.js"></script>
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/master.js"></script>
+<script src="assets/js/bootsnav.js"></script>
+<!--=== Javascript Plugins End ======-->
+
+<!-- Revolution js Files -->
+<script src="revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="revolution/js/revolution.extension.actions.min.js"></script>
+<script src="revolution/js/revolution.extension.carousel.min.js"></script>
+<script src="revolution/js/revolution.extension.kenburn.min.js"></script>
+<script src="revolution/js/revolution.extension.layeranimation.min.js"></script>
+<script src="revolution/js/revolution.extension.migration.min.js"></script>
+<script src="revolution/js/revolution.extension.navigation.min.js"></script>
+<script src="revolution/js/revolution.extension.parallax.min.js"></script>
+<script src="revolution/js/revolution.extension.slideanims.min.js"></script>
+<script src="revolution/js/revolution.extension.video.min.js"></script>
+<!--== Javascript Plugins End ==-->
+<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-5a323cd6-4ef3-435d-ac56-89bac958eaff" data-elfsight-app-lazy></div>
+<script>
+var revapi1078,
+	tpj=jQuery;
+
+	tpj(document).ready(function() {
+	/* ===== REVOLUTION SLIDER MAIN DEMO ===== */
+
+		if(tpj("#rev_slider_landing_custom").revolution == undefined){
+						revslider_showDoubleJqueryError("#rev_slider_landing_custom");
+					}else{
+						$("#rev_slider_landing_custom").show().revolution({
+							sliderType:"standard",
+							jsFileLocation:"revolution/js/",
+							sliderLayout:"fullscreen",
+							dottedOverlay:"none",
+							delay:9000,
+							navigation: {
+								keyboardNavigation:"off",
+								keyboard_direction: "horizontal",
+								mouseScrollNavigation:"off",
+	 							mouseScrollReverse:"default",
+								onHoverStop:"off",
+								touch:{
+									touchenabled:"on",
+									swipe_threshold: 75,
+									swipe_min_touches: 1,
+									swipe_direction: "horizontal",
+									drag_block_vertical: false
+								}
+								,
+								arrows: {
+									style:"hades",
+									enable:false,
+									hide_onmobile:true,
+									hide_under:600,
+									hide_onleave:true,
+									hide_delay:200,
+									hide_delay_mobile:1200,
+									tmp:'<div class="tp-arr-allwrapper"><div class="tp-arr-imgholder"></div></div>',
+									left: {
+										h_align:"left",
+										v_align:"center",
+										h_offset:30,
+										v_offset:0
+									},
+									right: {
+										h_align:"right",
+										v_align:"center",
+										h_offset:30,
+										v_offset:0
+									}
+								}
+								,
+								bullets: {
+									enable:false,
+									hide_onmobile:false,
+									hide_under:600,
+									style:"uranus",
+									hide_onleave:true,
+									hide_delay:200,
+									hide_delay_mobile:1200,
+									direction:"horizontal",
+									h_align:"center",
+									v_align:"bottom",
+									h_offset:0,
+									v_offset:30,
+									space:20,
+									tmp:'<span class="tp-bullet-inner"></span>'
+								}
+							},
+							viewPort: {
+								enable:false,
+								outof:"pause",
+								visible_area:"80%",
+								presize:false
+							},
+							responsiveLevels:[1240,1024,778,480],
+							visibilityLevels:[1240,1024,778,480],
+							gridwidth:[1240,1024,778,480],
+							gridheight:[600,600,500,400],
+							lazyType:"none",
+							parallax: {
+								type:"mouse",
+								origo:"slidercenter",
+								speed:2000,
+								levels:[2,3,4,5,6,7,12,16,10,50,47,48,49,50,51,55],
+							},
+							shadow:0,
+							spinner:"off",
+							stopLoop:"off",
+							stopAfterLoops:-1,
+							stopAtSlide:-1,
+							shuffle:"off",
+							autoHeight:"off",
+							hideThumbsOnMobile:"off",
+							hideSliderAtLimit:0,
+							hideCaptionAtLimit:0,
+							hideAllCaptionAtLilmit:0,
+							debugMode:false,
+							fallbacks: {
+								simplifyAll:"off",
+								nextSlideOnWindowFocus:"off",
+								disableFocusListener:false,
+							}
+						});
+					}
+
+	});
+</script>
+
+</body>
+</html>
