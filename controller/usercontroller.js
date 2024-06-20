@@ -1,7 +1,7 @@
+const Works = require("../models/Work");
 const Banner = require("../models/banner");
 const Clients = require("../models/clients");
 const Service = require("../models/service");
-const Works = require("../models/Work");
 
 module.exports={
     RenderHomePage : async(req,res)=>{
