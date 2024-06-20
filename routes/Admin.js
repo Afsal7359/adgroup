@@ -5,34 +5,39 @@ const banner = require('../controller/banner');
 const service = require('../controller/service');
 const Work = require('../controller/Work');
 const clients = require('../controller/clients');
+const adminauth = require('../middlewear/adminauth');
 const router = express.Router();
 
 /* GET users listing. */
-router.get('/',admincontroller.AdminDashboard);
+router.get('/adgroup', admincontroller.AdminDashboard);
+router.post('/login', admincontroller.PostLogin);
+router.get('/login', admincontroller.GetLogin);
+
+router.get('/logout',adminauth.adminauth, admincontroller.AdminLogout)
 
 //Banner 
-router.get('/banner',banner.GetBanner);
-router.post('/add-banner',upload.single('image'),banner.AddBanner);
-router.post('/edit-banner/:id',upload.single('image'),banner.EditBanner);
-router.get('/delete-banner/:id',banner.DeleteBanner);
+router.get('/banner',adminauth.adminauth, banner.GetBanner);
+router.post('/add-banner',adminauth.adminauth, upload.single('image'),adminauth.adminauth, banner.AddBanner);
+router.post('/edit-banner/:id',adminauth.adminauth, upload.single('image'),adminauth.adminauth, banner.EditBanner);
+router.get('/delete-banner/:id',adminauth.adminauth, banner.DeleteBanner);
 
 //Service
-router.get('/service',service.AdminServicePage);
-router.post('/add-service',upload.single('image'),service.AddService);
-router.post('/edit-service/:id',upload.single('image'),service.EditService);
-router.get('/delete-service/:id',service.DeleteService);
+router.get('/service',adminauth.adminauth, service.AdminServicePage);
+router.post('/add-service',adminauth.adminauth, upload.single('image'),adminauth.adminauth, service.AddService);
+router.post('/edit-service/:id',adminauth.adminauth, upload.single('image'),adminauth.adminauth, service.EditService);
+router.get('/delete-service/:id',adminauth.adminauth, service.DeleteService);
 
 //Works
-router.get('/work',Work.AdminWorkPage);
-router.post('/add-work',upload.single('image'),Work.AddWorks);
-router.post('/edit-work/:id',upload.single('image'),Work.EditWorks);
-router.get('/delete-work/:id',Work.DeleteWorks);
+router.get('/work',adminauth.adminauth, Work.AdminWorkPage);
+router.post('/add-work',adminauth.adminauth, upload.single('image'),adminauth.adminauth, Work.AddWorks);
+router.post('/edit-work/:id',adminauth.adminauth, upload.single('image'),adminauth.adminauth, Work.EditWorks);
+router.get('/delete-work/:id',adminauth.adminauth, Work.DeleteWorks);
 
 //Clients
-router.get('/clients',clients.Getclients);
-router.post('/add-clients',upload.single('image'),clients.Addclients);
-router.post('/edit-clients/:id',upload.single('image'),clients.Editclients);
-router.get('/delete-clients/:id',clients.Deleteclients);
+router.get('/clients',adminauth.adminauth, clients.Getclients);
+router.post('/add-clients',adminauth.adminauth, upload.single('image'),adminauth.adminauth, clients.Addclients);
+router.post('/edit-clients/:id',adminauth.adminauth, upload.single('image'),adminauth.adminauth, clients.Editclients);
+router.get('/delete-clients/:id',adminauth.adminauth, clients.Deleteclients);
 
 
 

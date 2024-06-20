@@ -7,6 +7,7 @@ const dotenv=require('dotenv')
 var userRouter = require('./routes/user');
 var adminRouter = require('./routes/Admin');
 const expressEjsLayouts = require('express-ejs-layouts');
+const bodyParser = require('body-parser');
 var path = require('path');
 const mongoose = require('mongoose');
 const session = require('express-session');
@@ -24,15 +25,20 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', userRouter);
-app.use('/admin', adminRouter);
 
-app.use(session({resave:false,saveUninitialized: true,secret:"key",cookie:{maxAge:6000000}}));
+app.use(session({
+  resave: false,
+  saveUninitialized: true,
+  secret: 'key',
+  cookie: { maxAge: 6000000 }
+}));
 app.use(function (req, res, next) {
   res.header('Cache-Control', 'no-cache, private, no-store, must-revalidate, max-stale=0, post-check=0, pre-check=0');
   next();
 });
 
+app.use('/', userRouter);
+app.use('/admin', adminRouter);
 // console.log(process.env.MONGO_URL);
 
 mongoose.connect(process.env.MONGO_URL).then(()=>{
