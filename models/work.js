@@ -17,5 +17,5 @@ const WorkSchema = new mongoose.Schema({
         trim:true
     }
 })
-const Works = mongoose.model("Works",WorkSchema);
+const Works = mongoose.model("works",WorkSchema);
 module.exports = Works;
