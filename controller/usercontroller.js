@@ -1,5 +1,5 @@
 
-const Works = require("../models/Work");
+const Works = require("../models/work");
 const Banner = require("../models/banner");
 const Clients = require("../models/clients");
 const Service = require("../models/service");

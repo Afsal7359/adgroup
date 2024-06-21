@@ -1,6 +1,6 @@
 const cloudinary = require("../utils/cloudinary");
-const Service = require('../models/service');
-const Works = require("../models/Work");
+
+const Works = require("../models/work");
 
 
 module.exports={
