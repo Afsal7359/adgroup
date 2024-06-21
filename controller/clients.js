@@ -1,4 +1,4 @@
-const Banner = require("../models/banner");
+
 const Clients = require("../models/clients");
 const cloudinary = require("../utils/cloudinary");
 

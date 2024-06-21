@@ -9,7 +9,7 @@ module.exports={
             const banner = await Banner.find().sort({_id:-1})
             const service = await Service.find().sort({_id:-1})
             const clients= await Clients.find().sort({_id:-1})
-            // const work = await Works.find().sort({_id:-1}).limit(3)
+            const work = await Works.find().sort({_id:-1}).limit(3)
             res.render('user/home',{banner,service,clients,work})
         } catch (error) {
             console.log(error);
