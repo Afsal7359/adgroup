@@ -9,7 +9,7 @@ const adminauth = require('../middlewear/adminauth');
 const router = express.Router();
 
 /* GET users listing. */
-router.get('/adgroup', admincontroller.AdminDashboard);
+router.get('/adgroup',adminauth.adminauth, admincontroller.AdminDashboard);
 router.post('/login', admincontroller.PostLogin);
 router.get('/login', admincontroller.GetLogin);
 
