@@ -106,7 +106,7 @@ body {
 }
 .hind-font{font-family: 'Hind', sans-serif;}
 .jost-font{font-family: 'Jost', sans-serif;}
-.cardo-font{font-family: 'Cardo', serif!important;}
+.cardo-font{font-family: 'Cardo', serif!important}
 .great-font{font-family: 'Great Vibes', cursive;}
 .josefin-font{font-family: 'Josefin Sans', sans-serif;}
 
@@ -3688,7 +3688,7 @@ ul.footer-gallery li img {
     height: 35px;
     text-align: center;
     line-height: 35px;
-    background: #d42e22;
+    background: #000;
     color: #fff;
     cursor: pointer;
     border: 0;

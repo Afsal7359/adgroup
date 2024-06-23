@@ -12,8 +12,8 @@
           <div class="hero-text-wrap">
             <div class="hero-text white-color">
               <div class="container text-left">
-                <h2 class="cardo-font"><%= item.heading %></h2>
-                <h2 class="cardo-font"><%= item.subheading %></h2>
+                <h1 class="cardo-font font-dark" ><%= item.heading %></h1>
+                <h2 class="cardo-font" ><%= item.subheading %></h2>
                 <p class="text-left mt-30"><a class="btn btn-dark btn-circle btn-animate"><span>Start Your Business <i class="icofont icofont-arrow-right"></i></span></a> </p>
               </div>
             </div>
@@ -40,36 +40,7 @@
   <!--=== Flex Slider End ======-->
 
 
-    <section class="first-ico-box">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-8 section-heading">
-            <h2 class="wow fadeTop text-uppercase" data-wow-delay="0.1s">Services <span class="font-100">We Offer</span></h2>
-            <h4 class="text-uppercase source-font wow fadeTop" data-wow-delay="0.2s">Services Provide</h4>
-          </div>
-        </div>
-        <div class="row mt-50 service-style-one">
-          <%if (service) { %>
-              <% for (let i = 0; i < service.length; i++) { %>
-                <% let item = service[i]; %>
-          <div class="col-md-4 text-center wow fadeTop" data-wow-delay="0.1s"> 
-            <div class="feature-box">
-              <img src="<%=item.image%>" alt="" style="height: 100%; width: 100%;">
-              <!-- <i class="icofont icofont-rocket-alt-1 font-50px gradient-color"></i> -->
-              <h3><%=item.heading%></h3>
-              <p><%= item.description.substring(0, 35) %>...</p>
-              <a class="btn btn-danger" href="/service/<%=item._id%>">view more ...</a>
-            </div>
-          </div>
-          <%}%>
-          <%}%>
-       
-     
-         
-        </div>
-      </div>
-    </section>
-    <!--=== Who We Are End ======-->
+   
 
 
 
@@ -80,7 +51,7 @@
           <div class="col-md-6">
             <div class="section-heading text-left">
               <h2 class="wow fadeTop text-uppercase" data-wow-delay="0.1s">About <span class="font-100">Us</span></h2>
-              <h4 class="text-uppercase source-font wow fadeTop" data-wow-delay="0.2s">Innovate . Design . Define</h4>
+              <h4 class="text-uppercase wow fadeTop" data-wow-delay="0.2s" style="color: #000;">Innovate . Design . Define</h4>
             </div>
             <!-- <div class="info-counter wow fadeTop" data-wow-delay="0.3s">
               <div class="circle-progress-wrap">
@@ -109,7 +80,7 @@
   
             <div class="row">
               <div class="col-md-12">
-                <a href="#" class="btn btn-color btn-circle wow fadeTop" data-wow-delay="0.3s">Read More</a>
+                <a href="#" class="btn btn-dark btn-circle wow fadeTop" data-wow-delay="0.3s">Read More</a>
               </div>
             </div>
           </div>
@@ -123,7 +94,37 @@
     </section>
     <!--=== About Us End ======-->
 
-
+    <section class="first-ico-box">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 section-heading">
+            <h2 class="wow fadeTop text-uppercase" data-wow-delay="0.1s">Services <span class="font-100">We Offer</span></h2>
+            <!-- <h4 class="text-uppercase source-font wow fadeTop" data-wow-delay="0.2s">Services Provide</h4> -->
+          </div>
+        </div>
+        <div class="row mt-50 service-style-one">
+          <%if (service) { %>
+              <% for (let i = 0; i < service.length; i++) { %>
+                <% let item = service[i]; %>
+          <div class="col-md-4 text-center wow fadeTop" data-wow-delay="0.1s"> 
+            <div class="feature-box">
+              <img src="<%=item.image%>" alt="" style="height: 100%; width: 100%;">
+              <!-- <i class="icofont icofont-rocket-alt-1 font-50px gradient-color"></i> -->
+              <h3><%=item.heading%></h3>
+              <p><%= item.description.substring(0, 35) %>...</p>
+              <a class="btn btn-dark" href="/service/<%=item._id%>">view more ...</a>
+            </div>
+          </div>
+          <%}%>
+          <%}%>
+       
+     
+         
+        </div>
+      </div>
+    </section>
+    <!--=== Who We Are End ======-->
+    
   <!--=== Portfolio Start ======-->
   <section>
     <div class="container">
@@ -173,15 +174,15 @@
     <div class="container">
       <div class="row">
         <div class="col-md-4 counter text-center col-sm-6 wow fadeTop" data-wow-delay="0.1s">
-          <h2 class="count font-700 gradient-color josefin-font">14</h2>
+          <h2 class="count font-700  josefin-font" style="color: #000;">14</h2>
           <h3 class="dark-color josefin-font">Years Experience</h3>
         </div>
         <div class="col-md-4 counter text-center col-sm-6 wow fadeTop" data-wow-delay="0.2s">
-          <h2 class="count font-700 gradient-color josefin-font">220</h2>
+          <h2 class="count font-700  josefin-font" style="color: #000;">220</h2>
           <h3 class="dark-color josefin-font">Happy Clients</h3>
         </div>
         <div class="col-md-4 counter text-center col-sm-6 wow fadeTop" data-wow-delay="0.3s">
-          <h2 class="count font-700 gradient-color josefin-font">108</h2>
+          <h2 class="count font-700  josefin-font" style="color: #000;">108</h2>
           <h3 class="dark-color josefin-font">Completed Works</h3>
         </div>
        
@@ -203,7 +204,7 @@
         <div class="col-md-1"></div>
         <div class="col-md-6">
           <div class="cta-heading-right">
-            <p class="mt-30 pull-right"><a href="/contact" class="btn btn-circle btn-outline">Contact Us</a></p>
+            <p class="mt-30 pull-right"><a href="/contact" class="btn btn-dark btn-outline-light">Contact Us</a></p>
           </div>
         </div>
       </div>
@@ -227,7 +228,7 @@
       <div class="row">
         <div class="col-sm-8 section-heading">
           <h2 class="wow fadeTop josefin-font text-uppercase" data-wow-delay="0.1s">Our <span class="font-100">Testimonials</span></h2>
-          <h4 class="text-uppercase source-font wow fadeTop" data-wow-delay="0.2s">- Happy Client Reviews -</h4>
+          <h4 class="text-uppercase source-font wow fadeTop" data-wow-delay="0.2s" style="color: #000;">- Happy Client Reviews -</h4>
         </div>
       </div>
       <div class="row">

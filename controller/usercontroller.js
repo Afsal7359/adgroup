@@ -7,8 +7,8 @@ const Service = require("../models/service");
 module.exports={
     RenderHomePage : async(req,res)=>{
         try {
-            const banner = await Banner.find().sort({_id:-1})
-            const service = await Service.find().sort({_id:-1})
+            const banner = await Banner.find()
+            const service = await Service.find()
             const clients= await Clients.find().sort({_id:-1})
             const work = await Works.find().sort({_id:-1}).limit(3)
             res.render('user/home',{banner,service,clients,work})
